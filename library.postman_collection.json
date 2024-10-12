@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "bf0464f6-4156-438e-a8af-c8286317e9eb",
+		"name": "library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23893324",
+		"_collection_link": "https://lunar-satellite-105543.postman.co/workspace/5d5c2752-6738-40b5-b2c8-55b7db6f2c23/collection/23893324-bf0464f6-4156-438e-a8af-c8286317e9eb?action=share&source=collection_link&creator=23893324"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"sujeet\",\r\n  \"email\": \"sujeet@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"Borrower\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/signup/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signup",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"karan@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"Borrower\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/login/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "add book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "DBMS",
+									"type": "text"
+								},
+								{
+									"key": "authorId",
+									"value": "66d537585ea378a1fb7de15f",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ram/Downloads/book2.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add/book/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add",
+								"book",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/fetch/all/books/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"fetch",
+								"all",
+								"books",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get book by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get/book/66d53e928f05aaedb03f9727/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get",
+								"book",
+								"66d53e928f05aaedb03f9727",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/delete/book/66d9be0a1a38bb34286fa499/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"book",
+								"66d9be0a1a38bb34286fa499",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Data Science",
+									"type": "text"
+								},
+								{
+									"key": "authorId",
+									"value": "66d53708ac72f60d1ecc4916",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ram/Downloads/bike.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update/book/66d53e928f05aaedb03f9727/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"book",
+								"66d53e928f05aaedb03f9727",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "library",
+			"item": [
+				{
+					"name": "add library",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"ABC Library\",\r\n    \"location\": \"Delhi\",\r\n     \"books\": [\r\n        \"66d53c28cf78250fa1648ea2\", \"66d53ccccf78250fa1648ea4\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add/library/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add",
+								"library",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all libraries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/fetch/all/libraries/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"fetch",
+								"all",
+								"libraries",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get library by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/get/library/66d5519094615ba9f2473a22/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"get",
+								"library",
+								"66d5519094615ba9f2473a22",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete library",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/delete/library/66d9bf351a38bb34286fa4a5/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"library",
+								"66d9bf351a38bb34286fa4a5",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update library",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"Abc Library\",\r\n    \"location\": \"Lkw\",\r\n     \"books\": [\r\n        \"66d53c28cf78250fa1648ea2\", \"66d53ccccf78250fa1648ea9\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/update/library/66d9bf351a38bb34286fa4a5/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"library",
+								"66d9bf351a38bb34286fa4a5",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add book to library inventory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"bookId\": \"66d9bfee7869a4d1fe35d785\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/add-book-to-library-inventory/66d5519094615ba9f2473a22/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"add-book-to-library-inventory",
+								"66d5519094615ba9f2473a22",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove book from library inventory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/remove-book-from-library-inventory/66d5519094615ba9f2473a22/66d9bfee7869a4d1fe35d785/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"remove-book-from-library-inventory",
+								"66d5519094615ba9f2473a22",
+								"66d9bfee7869a4d1fe35d785",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get books list from library",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/fetch-books-list-from-library-inventory/66d5519094615ba9f2473a22/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"fetch-books-list-from-library-inventory",
+								"66d5519094615ba9f2473a22",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "borrow book",
+			"item": [
+				{
+					"name": "borrow book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ1NDcxZDQ3YjQ5NTc2NzgzZjc1ODQiLCJlbWFpbCI6ImthcmFuQGdtYWlsLmNvbSIsImlhdCI6MTcyNTU0NjcyMiwiZXhwIjoxNzI1NTUwMzIyfQ.OKgqbwxVVQLGcZ5P9GjWHT5SGpjDmLXbn6l_XXyQhYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"bookId\": \"66d9bfee7869a4d1fe35d785\", \"charge\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/borrow/book/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"borrow",
+								"book",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ1NDcxZDQ3YjQ5NTc2NzgzZjc1ODQiLCJlbWFpbCI6ImthcmFuQGdtYWlsLmNvbSIsImlhdCI6MTcyNTU0NjcyMiwiZXhwIjoxNzI1NTUwMzIyfQ.OKgqbwxVVQLGcZ5P9GjWHT5SGpjDmLXbn6l_XXyQhYU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/return/book/66d9bfee7869a4d1fe35d785/:lang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"return",
+								"book",
+								"66d9bfee7869a4d1fe35d785",
+								":lang"
+							],
+							"variable": [
+								{
+									"key": "lang",
+									"value": "hi"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
